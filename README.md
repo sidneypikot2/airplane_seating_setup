@@ -1,17 +1,18 @@
-Run app
+### Run app
 
-Build docker: 
+## Create project folder
+  $ mkdir your_folder_name
 
-$ docker run -it --rm -v C:/Users/User/Desktop/Project/airplane_seating_setup/app:/app ruby:3.0 bash
+## Go to your project folder
+  $ cd your_folder_name
 
-Go to project folder
+## Clone project
 
-$ cd app
-
-Install dependencies:
-
-$ bundle install
-
-Run:
-
-$ ruby app.rb
+## Build docker
+  $ MSYS_NO_PATHCONV=1 docker run -v "${PWD}/app:/app" -it -w /app ruby:3.0 bash
+  
+## Install dependencies
+  $ bundle install
+  
+## Run
+  $ ruby app.rb
